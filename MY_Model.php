@@ -1,4 +1,4 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * A super-simple codeigniter model with CRUD functions and callbacks support
