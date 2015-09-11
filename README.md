@@ -56,7 +56,7 @@ class Users extends CI_Controller {
 
   public function index()
   {
-    $users = $this->user_model->get_all(); // retrieve all user, return 0 rows at the beginning
+    $users = $this->user_model->get_all(); // retrieve all user, return ampty array
 
     $user = new stdClass(); // create new user object
     $user->username = 'Vin Diesel';
