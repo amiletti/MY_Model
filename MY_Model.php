@@ -2,7 +2,6 @@
 
 /**
  * A super-simple codeigniter model with CRUD functions and callbacks support
- * based on Jamie Rumbelow base mdoel
  */
 
 class MY_Model extends CI_Model {
@@ -14,6 +13,7 @@ class MY_Model extends CI_Model {
   protected $_table;
   protected $_database;
   protected $_primary_key;
+  protected $_protected_attributes = array();
 
   protected $before_create = array();
   protected $after_create  = array();
@@ -24,7 +24,6 @@ class MY_Model extends CI_Model {
   protected $before_delete = array();
   protected $after_delete  = array();
 
-  protected $protected_attributes = array();
 
   /* --------------------------------------------------------------
    * Init
