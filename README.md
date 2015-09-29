@@ -13,7 +13,6 @@ class User_model extends MY_Model {
 
   public $_table                = 'users'; // mandatory
   public $_primary_key          = 'user_id'; // mandatory
-  public $_protected_attributes = array('user_id'); // advised
 
   public $before_create = array('created_at', 'updated_at', 'hash_password');
   public $before_update = array('updated_at');
