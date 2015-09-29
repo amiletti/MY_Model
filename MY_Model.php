@@ -9,8 +9,8 @@ class MY_Model extends CI_Model {
   /* --------------------------------------------------------------
    * Properties
    * ------------------------------------------------------------ */
-  protected $_table;
   protected $_database;
+  protected $_table
   protected $_primary_key;
 
   protected $before_create = array();
