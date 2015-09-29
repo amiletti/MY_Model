@@ -13,7 +13,6 @@ class MY_Model extends CI_Model {
   protected $_table;
   protected $_database;
   protected $_primary_key;
-  protected $_protected_attributes = array();
 
   protected $before_create = array();
   protected $after_create  = array();
@@ -28,21 +27,15 @@ class MY_Model extends CI_Model {
   /* --------------------------------------------------------------
    * Init
    * ------------------------------------------------------------ */
-
   public function __construct()
   {
     parent::__construct();
-
     $this->_database = $this->db;
-
-    array_unshift($this->before_create, 'protect_attributes');
-    array_unshift($this->before_update, 'protect_attributes');
   }
 
   /* --------------------------------------------------------------
    * CRUD methods
    * ------------------------------------------------------------ */
-
   public function get($primary_value)
   {
     return $this->get_by($this->_primary_key, $primary_value);
