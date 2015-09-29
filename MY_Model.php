@@ -9,7 +9,6 @@ class MY_Model extends CI_Model {
   /* --------------------------------------------------------------
    * Properties
    * ------------------------------------------------------------ */
-
   protected $_table;
   protected $_database;
   protected $_primary_key;
@@ -144,7 +143,6 @@ class MY_Model extends CI_Model {
   /* --------------------------------------------------------------
    * Codeigniter query builder wrapper
    * ------------------------------------------------------------ */
-
   public function order_by($criteria, $order = 'ASC')
   {
     if(is_array($criteria))
@@ -169,14 +167,6 @@ class MY_Model extends CI_Model {
   /* --------------------------------------------------------------
    * Custom methods
    * ------------------------------------------------------------ */
-
-  public function protect_attributes($row)
-  {
-    foreach($this->_protected_attributes as $attr) { unset($row->$attr); }
-
-    return $row;
-  }
-
   protected function _set_where($params)
   {
     if(count($params) == 1 && is_array($params[0]))
@@ -235,7 +225,6 @@ class MY_Model extends CI_Model {
   /* --------------------------------------------------------------
    * Trigger method for callbacks
    * ------------------------------------------------------------ */
-
   public function trigger($event, $data = FALSE, $last = TRUE)
   {
     if(isset($this->$event) && is_array($this->$event))
@@ -252,7 +241,6 @@ class MY_Model extends CI_Model {
   /* --------------------------------------------------------------
    * Custom callbacks
    * ------------------------------------------------------------ */
-
   public function created_at($row)
   {
     $row->created_at = date('Y-m-d H:i:s');
