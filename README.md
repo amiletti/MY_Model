@@ -1,6 +1,6 @@
-# NotOrm
+# MY_Model
 
-NotOrm is based on wonderful work of [Jamie Rumbelow](https://github.com/jamierumbelow) [codeigniter-base-model](https://github.com/jamierumbelow/codeigniter-base-model).
+MY_Model is based on wonderful work of [Jamie Rumbelow](https://github.com/jamierumbelow) [codeigniter-base-model](https://github.com/jamierumbelow/codeigniter-base-model).
 Usually I don't need all the features of codeigniter-base-model, then I remove some features form his model. Basically I only keep the basic crud operation and the trigger for after/before event callbacks. I removed instead all validation and relationship method and the chance to pass a variable to the callbacks.
 
 # Usage sample
